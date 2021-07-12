@@ -1,0 +1,11 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+node_modules/
+jspm_packages/
+vendor/
+
+# Environment file
+env

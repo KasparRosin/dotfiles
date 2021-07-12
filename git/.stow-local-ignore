@@ -1,0 +1,2 @@
+# https://www.gnu.org/software/stow/manual/stow.html#Types-And-Syntax-Of-Ignore-Lists
+# Overrides the default ignore list. Allowing us to symlink .gitignore filename.
