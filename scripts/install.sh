@@ -11,7 +11,13 @@ sudo apt-get install -y \
     stow \
     vim \
     nodejs \
-    npm
+    npm \
+
+# Install common packages required for php
+sudo apt-get install -y \
+    php-xml \
+    php-mbstring \
+    php-curl
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended --keep-zshrc
