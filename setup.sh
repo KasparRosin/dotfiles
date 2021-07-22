@@ -7,9 +7,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Create symlinks
-echo Creating symlinks
-sh ./scripts/stow.sh
+bash ./scripts/stow.sh
 
 # Install essential packages and applications
-echo Installing packages
-sh ./scripts/install.sh
+bash ./scripts/install.sh
