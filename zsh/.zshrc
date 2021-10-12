@@ -72,11 +72,6 @@ plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export VIM="nvim"
-export GIT_EDITOR="$VIM"
-
 # Source the shell configuration files.
 # aliases, paths, envs etc.
 SHELL_CONFIG_DIR=$HOME/.config/shell
