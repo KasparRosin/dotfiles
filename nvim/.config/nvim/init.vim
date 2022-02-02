@@ -23,7 +23,16 @@ set colorcolumn=80
 set updatetime=50
 
 call plug#begin('$HOME/.config/nvim/plugged')
+" Theme
 Plug 'morhetz/gruvbox'
+
+" Telescope
+" Plug 'nvim-lua/popup.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-telescope/telescope-fzy-native.nvim'
 call plug#end()
 
+" Theme
 colorscheme gruvbox
+highlight Normal guibg=none
