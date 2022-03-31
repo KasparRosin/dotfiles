@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+curr_lang=$(setxkbmap -print | awk -F"+" '/xkb_symbols/ {print $2}')
+
+case $curr_lang in
+    ee) next_lang=us ;;
+    us) next_lang=ee ;;
+esac
+
+case $BLOCK_BUTTON in
+    1) setxkbmap $next_lang && curr_lang=$next_lang ;;
+esac
+
+echo $curr_lang
