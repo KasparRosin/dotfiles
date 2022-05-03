@@ -1,15 +1,12 @@
 # Global properties
-# command=$I3BLOCK_SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
 [language]
-#label=LNG
-#command=setxkbmap -print | grep xkb_symbols | awk '{print $4}' | awk -F"+" '{print $2}'
 command=$HOME/.config/i3blocks/scripts/language
 interval=once
+
 
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=5
-RR

@@ -1,0 +1,5 @@
+# user bin
+export PATH="$PATH:$HOME/bin"
+
+# composer
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
