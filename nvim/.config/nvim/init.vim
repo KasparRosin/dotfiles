@@ -27,7 +27,10 @@ call plug#begin('$HOME/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 
 " LSP
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
+
+" Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -35,8 +38,6 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
-
-" For vsnip users.
 
 " Telescope
 " Plug 'nvim-lua/popup.nvim'
@@ -49,4 +50,5 @@ call plug#end()
 colorscheme gruvbox
 highlight Normal guibg=none
 
+" Init scripts
 lua require('init')
