@@ -28,12 +28,15 @@ Plug 'morhetz/gruvbox'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-Plug 'L3MON4D3/LuaSnip'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'L3MON4D3/LuaSnip'
+
+" For vsnip users.
 
 " Telescope
 " Plug 'nvim-lua/popup.nvim'
@@ -46,4 +49,4 @@ call plug#end()
 colorscheme gruvbox
 highlight Normal guibg=none
 
-lua require("init")
+lua require('init')
