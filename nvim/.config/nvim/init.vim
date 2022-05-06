@@ -26,6 +26,10 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Theme
 Plug 'morhetz/gruvbox'
 
+" Pleb Plugins
+Plug 'neovim/nvim-lspconfig'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+
 " Telescope
 " Plug 'nvim-lua/popup.nvim'
 " Plug 'nvim-lua/plenary.nvim'
@@ -36,3 +40,5 @@ call plug#end()
 " Theme
 colorscheme gruvbox
 highlight Normal guibg=none
+
+lua require("init")
