@@ -1,5 +1,3 @@
-# user bin
+export PATH="/home/kaspar/.fly/bin:$PATH"
 export PATH="$PATH:$HOME/bin"
-
-# composer
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
