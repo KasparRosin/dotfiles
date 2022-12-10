@@ -56,7 +56,6 @@ local config = {
       signcolumn = "yes",
       incsearch = true,
       scrolloff = 8,
-      termguicolors = true,
       colorcolumn = "80",
       updatetime = 50,
     },
