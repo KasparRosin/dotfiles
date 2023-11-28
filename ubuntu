@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+sudo apt install stow
+exit 0
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="git,zsh,ubuntuos,nvim,i3"
 fi
