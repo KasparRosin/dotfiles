@@ -12,6 +12,7 @@ setup_packages() {
 		ripgrep \
 		gcc
 
+	# Install snap packages
 	sudo snap install \
 		chezmoi --classic
 }
@@ -20,8 +21,9 @@ main() {
 	# Setups
 	setup_packages
 
-	# Make zsh as default shell
-	chsh -s $(which zsh)
+	# Install node
+	\. "$NVM_DIR/nvm.sh"
+	nvm install node -lts
 }
 
 main "$@"
