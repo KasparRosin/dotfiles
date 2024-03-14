@@ -1,0 +1,15 @@
+# Generic .gitignore file across the system.
+# Ignores directories and files that under no circumstance should end up in cloud version control.
+
+## System Files
+.DS_Store
+Thumbs.db
+
+## Dependency directories
+node_modules/
+jspm_packages/
+vendor/
+
+
+## Environment file
+env
