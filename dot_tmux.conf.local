@@ -1,0 +1,9 @@
+# ~/.tmux.local.conf
+# =============================================================================
+# Extra options for tmux Terminal Multiplexer sourced by Oh My Tmux.
+#
+
+# See https://github.com/gpakosz/.tmux
+# See https://github.com/tmux/tmux/wiki
+
+
