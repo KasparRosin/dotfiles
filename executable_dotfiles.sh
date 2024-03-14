@@ -10,8 +10,9 @@ setup_packages() {
     		curl \
 		neovim \
 		ripgrep \
+		gcc
 
-	snap install \
+	sudo snap install \
 		chezmoi --classic
 }
 
