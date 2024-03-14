@@ -13,14 +13,14 @@ setup_packages() {
 
 	snap install \
 		chezmoi --classic
-
-	# Install Oh-My-Zsh
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-	chsh -s $(which zsh)
 }
 
 main() {
+	# Setups
 	setup_packages
+
+	# Make zsh as default shell
+	chsh -s $(which zsh)
 }
 
 main "$@"
