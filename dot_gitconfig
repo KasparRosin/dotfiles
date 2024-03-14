@@ -5,10 +5,9 @@
 [init]
 	defaultBranch = main
 
-[alias]
-	contributors = shortlog --summary --numbered --email
-	branches = for-each-ref --sort=-committerdate --format='%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
-
 [submodule]
 	recurse = true
 
+[include]
+    	# Include aliases.
+    	path = .gitconfig_aliases
