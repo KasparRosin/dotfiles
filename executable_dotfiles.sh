@@ -10,7 +10,8 @@ setup_packages() {
     		curl \
 		neovim \
 		ripgrep \
-		gcc
+		gcc \
+		unzip
 
 	# Install snap packages
 	sudo snap install \
