@@ -10,7 +10,13 @@ setup_packages() {
     		curl \
 		neovim \
 		ripgrep \
-		chezmoi
+
+	snap install \
+		chezmoi --classic
+
+	# Install Oh-My-Zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	chsh -s $(which zsh)
 }
 
 main() {
