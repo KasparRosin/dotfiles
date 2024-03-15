@@ -17,7 +17,11 @@ setup_packages() {
 		php8.2 \
 		php8.2-cli \
 		php8.2-mysql \
-		php8.2-pgsql
+		php8.2-pgsql \
+		php8.2-mbstring \
+		php8.2-xml \
+		php8.2-zip \
+		php8.2-curl
 
 	# Install snap packages
 	sudo snap install \
