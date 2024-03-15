@@ -2,8 +2,8 @@
 
 setup_packages() {
         # Add required repositories 
-	sudo add-apt-repository -y \
-		ppa:neovim-ppa/unstable
+	sudo add-apt-repository -y ppa:neovim-ppa/unstable # neovim
+	sudo add-apt-repository -y ppa:ondrej/php # php
 
 	# Install required packages
 	sudo apt update && sudo apt install -y \
@@ -11,7 +11,13 @@ setup_packages() {
 		neovim \
 		ripgrep \
 		gcc \
-		unzip
+		unzip \
+		ca-certificates \
+		software-properties-common \
+		php8.2 \
+		php8.2-cli \
+		php8.2-mysql \
+		php8.2-pgsql
 
 	# Install snap packages
 	sudo snap install \
