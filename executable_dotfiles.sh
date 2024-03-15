@@ -24,13 +24,29 @@ setup_packages() {
 		chezmoi --classic
 }
 
-main() {
-	# Setups
-	setup_packages
-
+setup_node() {
 	# Install node
 	\. "$NVM_DIR/nvm.sh"
 	nvm install node -lts
+}
+
+setup_php() {
+	if [ ! -f /usr/local/bin/composer ]; then
+		# Download and install Composer
+		php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+		php composer-setup.php --quiet
+		php -r "unlink('composer-setup.php');"
+		sudo mv composer.phar /usr/local/bin/composer
+		sudo chmod 777 /usr/local/bin/composer
+		echo "Composer installed successfully!"
+	fi
+}
+
+main() {
+	# Setups
+	setup_packages
+	setup_node
+	setup_php
 }
 
 main "$@"
