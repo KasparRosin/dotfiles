@@ -21,11 +21,12 @@ setup_packages() {
 		php8.2-mbstring \
 		php8.2-xml \
 		php8.2-zip \
-		php8.2-curl
+		php8.2-curl \
+		php8.2-redis
 
 	# Install snap packages
-	sudo snap install \
-		chezmoi --classic
+	sudo snap install chezmoi --classic
+	sudo snap install redis
 }
 
 setup_node() {
