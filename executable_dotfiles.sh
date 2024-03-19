@@ -46,11 +46,21 @@ setup_php() {
 	fi
 }
 
+setup_postgres() {
+	# Create the file repository configuration & import the repository signing key
+	sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+	wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+	sudo apt update
+	sudo apt -y install postgresql-16
+}
+
 main() {
 	# Setups
 	setup_packages
 	setup_node
 	setup_php
+	setup_postgres
 }
 
 main "$@"
