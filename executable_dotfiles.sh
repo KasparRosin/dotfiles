@@ -22,7 +22,9 @@ setup_packages() {
 		php8.2-xml \
 		php8.2-zip \
 		php8.2-curl \
-		php8.2-redis
+		php8.2-redis \
+		php8.2-intl \
+		python3-pip
 
 	# Install snap packages
 	sudo snap install chezmoi --classic
