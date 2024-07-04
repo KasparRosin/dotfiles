@@ -1,0 +1,33 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Install Brews
+echo '🍺  Installing Brews'
+brew bundle --no-lock --file=/dev/stdin <<EOF
+brew "git"
+brew "neovim"
+brew "ripgrep"
+brew "php"
+brew "postgresql@16"
+brew "tmux"
+brew "lazygit"
+EOF
+
+echo '🍺  Finished installing Brews'
+
+# Check if PHP was installed correctly
+if ! [ -x "$(command -v php)" ]; then
+    echo '❌  PHP installation failed'
+    exit 1
+fi
+
+# Install Composer
+if ! [ -x "$(command -v composer)" ]; then
+    echo '🎼  Installing Composer'
+    curl -sS https://getcomposer.org/installer | php
+    sudo mkdir -p /usr/local/bin/
+    sudo mv ~/composer.phar /usr/local/bin/composer
+    echo '🎼  Finished installing Composer'
+fi
+
+{{ end -}}

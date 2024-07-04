@@ -1,0 +1,25 @@
+{{ if eq .chezmoi.os "darwin" }}
+# macOS specific PATH settings
+
+# Add Composer
+if [ -d "$HOME/.composer/vendor/bin" ]; then
+  export PATH="$HOME/.composer/vendor/bin:$PATH"
+fi
+
+# Add Homebrew
+if [ -d "/opt/homebrew/bin" ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/sbin:$PATH"
+fi
+
+# Add PostgreSQL 16
+if [ -d "/opt/homebrew/opt/postgresql@16/bin" ]; then
+  export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+  export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@16/lib/pkgconfig"
+fi
+{{ end }}
+
+# General PATH settings
+export PATH="$HOME/bin:$PATH"
