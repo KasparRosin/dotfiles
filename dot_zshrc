@@ -1,0 +1,18 @@
+_p10k_prompt=~/.cache/p10k-instant-prompt-${(%):-%n}.zsh
+[[ -r $_p10k_prompt ]] && source $_p10k_prompt
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+CASE_SENSITIVE="true"
+
+zstyle ':omz:update' mode reminder
+zstyle ':omz:update' frequency 13
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+source ~/.aliases
+source ~/.p10k.zsh
+
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
