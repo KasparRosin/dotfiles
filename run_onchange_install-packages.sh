@@ -16,7 +16,10 @@ sudo apt update && sudo apt install -y \
     htop \
     tree \
     unzip \
-    lazygit
+    lazygit \
+    postgresql \
+    postgresql-contrib \
+    sqlite3
 
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
