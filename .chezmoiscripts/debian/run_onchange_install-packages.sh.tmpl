@@ -1,3 +1,4 @@
+{{ if eq .osid "debian" -}}
 #!/bin/bash
 set -euo pipefail
 
@@ -23,6 +24,4 @@ sudo apt update && sudo apt install -y \
     sqlite3
 
 # Oh My Zsh, powerlevel10k and tpm are installed via .chezmoiexternal.toml
-
-echo "Installing Node Version Manager..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | PROFILE=/dev/null bash
+{{ end -}}

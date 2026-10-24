@@ -1,3 +1,4 @@
+{{ if eq .osid "debian" -}}
 #!/bin/bash
 
 echo "Installing PHP 8.4 with common extensions..."
@@ -23,3 +24,4 @@ sudo mv composer.phar /usr/local/bin/composer
 echo "PHP and Composer installation completed!"
 php --version
 composer --version
+{{ end -}}

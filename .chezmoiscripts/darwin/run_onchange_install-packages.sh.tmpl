@@ -1,0 +1,30 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+set -euo pipefail
+
+if ! command -v brew >/dev/null; then
+    echo "Homebrew is missing, install it first: https://brew.sh"
+    exit 1
+fi
+
+echo "Installing packages and other tools.."
+brew bundle --file=/dev/stdin <<BREWFILE
+brew "git"
+brew "neovim"
+brew "ripgrep"
+brew "fd"
+brew "fzf"
+brew "bat"
+brew "jq"
+brew "htop"
+brew "tree"
+brew "tmux"
+brew "lazygit"
+brew "php"
+brew "composer"
+brew "postgresql@16"
+brew "redis"
+BREWFILE
+
+# Oh My Zsh, powerlevel10k and tpm are installed via .chezmoiexternal.toml
+{{ end -}}

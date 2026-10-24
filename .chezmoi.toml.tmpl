@@ -1,0 +1,13 @@
+{{- /* Worked out once per machine by `chezmoi init`. Check with: chezmoi data | grep -E 'osid|wsl|email' */ -}}
+{{- $osid := .chezmoi.os -}}
+{{- $wsl := false -}}
+{{- if eq .chezmoi.os "linux" -}}
+{{-   $osid = .chezmoi.osRelease.id -}}
+{{-   $wsl = .chezmoi.kernel.osrelease | lower | contains "microsoft" -}}
+{{- end -}}
+{{- $email := promptStringOnce . "email" "Git email" -}}
+
+[data]
+    osid = {{ $osid | quote }}
+    wsl = {{ $wsl }}
+    email = {{ $email | quote }}

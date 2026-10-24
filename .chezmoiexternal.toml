@@ -1,6 +1,7 @@
 [".config/nvim"]
     type = "git-repo"
-    url = "git@github.com:KasparRosin/nvim-config.git"
+    url = "https://github.com/KasparRosin/nvim-config.git"
+    clone.args = ["--config", "remote.origin.pushurl=git@github.com:KasparRosin/nvim-config.git"]
     refreshPeriod = "168h"
 
 [".oh-my-zsh"]
