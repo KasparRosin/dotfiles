@@ -1,6 +1,9 @@
 #!/bin/bash
+set -euo pipefail
 
-# Install latest neovim from GitHub releases
-NVIM_VERSION="v0.11.5"
+# Install neovim from GitHub releases
+NVIM_VERSION="v0.11.7"
 curl -fsSL -o /tmp/nvim.tar.gz "https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-x86_64.tar.gz"
+# Clear the previous version's runtime so stale files don't linger
+sudo rm -rf /usr/local/share/nvim /usr/local/lib/nvim
 sudo tar -xzf /tmp/nvim.tar.gz -C /usr/local --strip-components=1

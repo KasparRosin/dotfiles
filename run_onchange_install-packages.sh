@@ -1,8 +1,9 @@
 #!/bin/bash
+set -euo pipefail
 
 echo "Installing packages and other tools.."
 sudo apt update && sudo apt install -y \
-        build-essential \
+    build-essential \
     curl \
     wget \
     git \
@@ -21,8 +22,7 @@ sudo apt update && sudo apt install -y \
     postgresql-contrib \
     sqlite3
 
-echo "Installing Oh My Zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# Oh My Zsh, powerlevel10k and tpm are installed via .chezmoiexternal.toml
 
 echo "Installing Node Version Manager..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | PROFILE=/dev/null bash
